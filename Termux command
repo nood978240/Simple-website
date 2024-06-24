@@ -1,0 +1,37 @@
+compatible termux only
+oppo window laptop
+version 1.08
+
+# Update packages
+pkg update && pkg upgrade
+
+# Install Git and other tools
+pkg install git vim openssh
+
+# Configure Git
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+
+# Create and navigate to project directory
+mkdir simple-website
+cd simple-website
+
+# Initialize Git
+git init
+
+# Create files
+touch index.html styles.css
+
+# Edit files (example using Nano)
+nano index.html
+
+# Add and commit files
+git add .
+git commit -m "Initial commit"
+
+# Add remote repository
+git remote add origin https://github.com/yourusername/simple-website.git
+
+# Push to GitHub
+git branch -M main
+git push -u origin main
